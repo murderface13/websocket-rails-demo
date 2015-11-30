@@ -1,1 +1,6 @@
-= button_tag 'Send message', id: 'sendMessageButton'
+/ = button_tag 'Send message', id: 'sendMessageButton'
+= form_for Message.new do |f|
+  = f.label :username
+  = f.text_field :username
+  = f.text_field :message
+  = f.submit
