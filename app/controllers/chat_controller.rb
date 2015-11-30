@@ -5,7 +5,9 @@ class ChatController < WebsocketRails::BaseController
     controller_store[:message_count] = 0
   end
 
-  def create_message
+  def create
+    new_comment = 'lorem ipsum'
+    broadcast_message :new_comment, new_comment
     binding.pry
   end
 end

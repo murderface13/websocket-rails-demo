@@ -6,8 +6,7 @@ WebsocketRails::EventMap.describe do
   # Uncomment and edit the next line to handle the client connected event:
   #   subscribe :client_connected, :to => Controller, :with_method => :method_name
 
-  # subscribe :create_message, 'chat#create_message'
-  subscribe :create_message, to: ChatController, with_method: :create_message
+  subscribe :chat_message_sent, 'chat#create'
   #
   # Here is an example of mapping namespaced events:
   #   namespace :product do
