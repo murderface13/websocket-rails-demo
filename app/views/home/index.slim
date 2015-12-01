@@ -1,6 +1,6 @@
-/ = button_tag 'Send message', id: 'sendMessageButton'
-= form_for Message.new do |f|
-  = f.label :username
-  = f.text_field :username
-  = f.text_field :message
-  = f.submit
+.row
+  - 1.upto 3 do |n|
+    .col-xs-4 class= "user_#{n}"
+      ul
+      input type= 'text'
+      a.btn.btn-default Send

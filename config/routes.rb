@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :messages
+
+  post 'send_message' => 'messages#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
